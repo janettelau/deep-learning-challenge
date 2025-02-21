@@ -35,22 +35,26 @@ Were you able to achieve the target model performance?
 What steps did you take in your attempts to increase model performance?
 
 #### Neural Network Model
-* Consists of 3 layers, with 80, 30, and 1 neuron(s) respectively.
+* The model consists of three layers:
+  * Two hidden layers with 80 and 30 neurons respectively, using the ReLU activation function.
+  * An output layer with 1 neuron, using the sigmoid activation function.
+* The model reached an accuracy of approximately 72.40%, which did not achieve the target model performance of 75% accuracy.
 
 ![Model before optimization attempts](./images/model_initial.png)
 
-#### Optimization 1
-* 
+#### Optimization 1: Adding a Hidden Layer
+* Added a hidden layer, so there are a total of three hidden layers with 120, 80, and 30 neurons respectively.
 
 ![Optimization 1](./images/model_opt1.png)
 
-#### Optimization 2
-* 
+#### Optimization 2: Increasing the Neurons in the First Hidden Layer
+* Increased the number of neurons in the first hidden layer from 120 to 150.
 
 ![Optimization 2](./images/model_opt2.png)
 
-#### Optimization 3
-* 
+#### Optimization 3: Increasing the Neurons in the Second Hidden Layer and Introducing Early Stopping
+* Adjusted the number of neurons in the second hidden layer from 80 to 100.
+* Added EarlyStopping to stop training the model once validation loss does not improve for five epochs (patience=5), an attempt to prevent overfitting.
 
 ![Optimization 3](./images/model_opt3.png)
 
